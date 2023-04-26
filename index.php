@@ -71,12 +71,11 @@ class Eventual extends Plantilla {
     protected $numWebsMulti;
     
   
-    public function __construct($dni, $nombre, $apellidos, $anhoAlta, $web, $webMulti, $numWebs, $numWebsMulti) {
+    public function __construct($dni, $nombre, $apellidos, $anhoAlta, $numWebs, $numWebsMulti) {
       parent::__construct($dni, $nombre, $apellidos, $anhoAlta);
       $this->numWebs = $numWebs;
       $this->numWebsMulti = $numWebsMulti;
-      $this->web = $web;
-      $this->webMulti = $webMulti;
+      
     }
     
 
@@ -97,3 +96,9 @@ class Eventual extends Plantilla {
       );
     }
 }
+
+$fijo = new Fijo ('22457234T', 'Juan', 'Perez', '2010');
+$eventual = new Eventual ('8746583P', 'Maria', 'Gomez', '2023', 2, 1, 1, 1);
+
+echo $fijo . "<br>";
+echo $eventual;
