@@ -51,7 +51,7 @@ class Fijo extends Plantilla {
       $sueldo = $this->calcularSueldo();
       $antiguedad = date("Y") - $this->anhoAlta;
   
-      return sprintf("%s <br> Antigüedad: %d año(s) <br> Sueldo: %d €",
+      return sprintf("%s <br> <strong>Fijo</strong> <br> Antigüedad: %d año(s) <br> Sueldo: %d €",
           parent::__toString(),
           $antiguedad,
           $sueldo
@@ -88,7 +88,7 @@ class Eventual extends Plantilla {
     public function __toString(): string {
       $sueldo = $this->calcularSueldo();
       
-      return sprintf("%s <br>Numero de Webs: %d <br> Numero de Webs Multilenguaje: %d <br> Sueldo: %d €",
+      return sprintf("%s <br> <strong>Eventual</strong> <br>Numero de Webs: %d <br> Numero de Webs Multilenguaje: %d <br> Sueldo: %d €",
           parent::__toString(),
           $this->numWebs,
           $this->numWebsMulti,
